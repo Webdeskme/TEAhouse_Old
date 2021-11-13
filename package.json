@@ -1,0 +1,31 @@
+{
+  "name": "scriptos",
+  "version": "1.0.0",
+  "description": "node/javascript os",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Webdeskme/scriptOS.git"
+  },
+  "keywords": [
+    "node",
+    "javascript",
+    "js",
+    "os"
+  ],
+  "author": "Adam W Telford",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Webdeskme/scriptOS/issues"
+  },
+  "homepage": "https://github.com/Webdeskme/scriptOS#readme",
+  "devDependencies": {
+    "electron": "^15.3.1"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.0"
+  }
+}
