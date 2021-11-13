@@ -4,17 +4,48 @@
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <link href="./styles.css" rel="stylesheet">
-    <title>Hello World!</title>
+    <!--<link href="./styles.css" rel="stylesheet">-->
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>scriptOS</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <script src="renderer.js"></script>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">scriptOS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link</a></li>
+            <li><a class="dropdown-item" href="#">Another link</a></li>
+            <li><a class="dropdown-item" href="#">A third link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!--<h1>Hello World!</h1>
     We are using Node.js <span id="node-version"></span>,
     Chromium <span id="chrome-version"></span>,
     and Electron <span id="electron-version"></span>.
 <a href="test.html" target="_blank">test</a>
 <a href="test2.html" target="_blank">test2</a>
     <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
   </body>
 </html>

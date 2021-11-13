@@ -10,7 +10,7 @@ function createWindow () {
     "fullscreen": true,
     "title": "main window",
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+       enableRemoteModule: true, nodeIntegration: true, contextIsolation: false 
     }
   })
   // and load the index.html of the app.
