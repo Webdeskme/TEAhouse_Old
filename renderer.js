@@ -8,6 +8,8 @@ var $ = require( "jquery" );
 //const bootstrap = require('bootstrap');
 window.$ = $;
 require('bootstrap');
+const remote = require('electron').remote;
+  const {ipcRenderer} = require('electron');
 var exec = require('child_process').exec;
 $("#shut").click(function(){
     exec('shutdown now');
