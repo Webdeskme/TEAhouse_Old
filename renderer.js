@@ -10,9 +10,8 @@ $("#shut").click(function(){
 $("#restart").click(function(){
   exec('sudo shutdown -r now');
 });
-fs.readdir(homedir, (err, list) => {
+fs.readdir(homedir + '/usr/admin/Apps/', (err, list) => {
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
-  console.log(list);
   list.forEach(myApps);
 function myApps(item) {
   $("#apps").append('<li><a class="dropdown-item" href="test.html" target="_blank">' + item + '</a></li>');
@@ -31,17 +30,7 @@ function formatDate(date) {
 function updateClock() {
     var now = new Date() // current date
     var d = formatDate(now);
-        /*months = ['January', 'February', 'March']; // you get the idea
-        time = now.getHours() + ':' + now.getMinutes(), // again, you get the idea
-
-        // a cleaner way than string concatenation
-        date = [now.getDate(),
-                months[now.getMonth()],
-                now.getFullYear()].join(' ');*/
-
-    // set the content of the element with the ID time to the formatted string
     document.getElementById('time').innerHTML = d;
-
     // call this function again in 1000ms
     setTimeout(updateClock, 1000);
 }
