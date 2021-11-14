@@ -8,6 +8,7 @@ var $ = require( "jquery" );
 //const bootstrap = require('bootstrap');
 window.$ = $;
 require('bootstrap');
+var exec = require('child_process').exec;
 $("#shut").click(function(){
     exec('shutdown now');
   });
