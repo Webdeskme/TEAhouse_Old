@@ -1,40 +1,43 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
-const path = require('path')
+//const path = require('path')
 const electron = require('electron');
-var screenElectron = electron.screen;
+//const { screen } = require('electron');
+  //const size = screen.getPrimaryDisplay().workAreaSize;
+//var screenElectron = electron.screen;
 //var mainScreen = screenElectron.getPrimaryDisplay();
 //var allScreens = screenElectron.getAllDisplays();
-var mainScreen = screenElectron.getPrimaryDisplay();
-var dimensions = mainScreen.size;
+//var mainScreen = screenElectron.getPrimaryDisplay();
+//var dimensions = mainScreen.size;
 
-var w = dimensions.width;
-var h =  dimensions.height;
+//var w = dimensions.width;
+//var h =  dimensions.height;
 // Outputs i.e : 1280x720
 
 
-console.log(mainScreen, allScreens);
+//console.log(mainScreen, allScreens);
 
 function createWindow () {
   // Create the browser window.
+  //const screenSize = screen.getPrimaryDisplay().workAreaSize;
   const mainWindow = new BrowserWindow({
     type: "desktop",
-    width: w,
-  height: h,
+    width: 800,
+  height: 400,
   fullscreen: true,
   frame: false,
   autoHideMenuBar: true,
-  kiosk: true,
-    title: "main window",
+    "title": "main window",
     webPreferences: {
        enableRemoteModule: true, nodeIntegration: true, contextIsolation: false
     }
   })
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
+  mainWindow.maximize();
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+   mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
