@@ -5,7 +5,7 @@ const path = require('path')
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    "fullscreen": true,
+    "kiosk": true,
     "title": "main window",
     webPreferences: {
        enableRemoteModule: true, nodeIntegration: true, contextIsolation: false
