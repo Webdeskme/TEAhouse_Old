@@ -1,19 +1,20 @@
-// This file is required by the index.html file and will
-// be executed in the renderer process for that window.
-// No Node.js APIs are available in this process because
-// `nodeIntegration` is turned off. Use `preload.js` to
-// selectively enable features needed in the rendering
-// process.
 var $ = require( "jquery" );
-//const bootstrap = require('bootstrap');
 window.$ = $;
 require('bootstrap');
-const remote = require('electron').remote;
-  const {ipcRenderer} = require('electron');
-var exec = require('child_process').exec;
+const { exec } = require('child_process');
+var fs = require('fs-extra');
+const homedir = require('os').homedir();
 $("#shut").click(function(){
-    exec('shutdown -h now');
-  });
-  $("#restart").click(function(){
-      exec('shutdown -r');
-    });
+  exec('sudo shutdown -h now');
+});
+$("#restart").click(function(){
+  exec('sudo shutdown -r now');
+});
+fs.readdir(homedir, (err, list) => {
+  list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
+  console.log(list);
+  list.forEach(myApps);
+function myApps(item) {
+  $("#apps").append('<li><a class="dropdown-item" href="test.html" target="_blank">' + item + '</a></li>');
+}
+});
