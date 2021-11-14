@@ -5,8 +5,13 @@ const path = require('path')
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    "kiosk": true,
-    "title": "main window",
+    width: 800,
+  height: 600,
+  fullscreen: true,
+  frame: false,
+  autoHideMenuBar: true,
+  kiosk: true,
+    title: "main window",
     webPreferences: {
        enableRemoteModule: true, nodeIntegration: true, contextIsolation: false
     },
