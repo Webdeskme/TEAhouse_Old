@@ -14,7 +14,7 @@ fs.readdir(homedir + '/usr/admin/Apps/', (err, list) => {
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
   list.forEach(myApps);
 function myApps(item) {
-  $("#apps").append('<li><a class="dropdown-item" href="' + homedir + '/usr/admin/Apps/'' + item + '/index.html" target="_blank">' + item + '</a></li>');
+  $("#apps").append('<li><a class="dropdown-item" href="' + homedir + '/usr/admin/Apps/' + item + '/index.html" target="_blank">' + item + '</a></li>');
 }
 });
 function formatDate(date) {
