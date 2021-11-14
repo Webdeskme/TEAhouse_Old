@@ -19,11 +19,12 @@ const electron = require('electron');
 
 function createWindow () {
   // Create the browser window.
+  const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize;
   //const screenSize = screen.getPrimaryDisplay().workAreaSize;
   const mainWindow = new BrowserWindow({
     type: "desktop",
-    width: 800,
-  height: 400,
+    width: width,
+  height: height,
   fullscreen: true,
   frame: false,
   autoHideMenuBar: true,
@@ -33,8 +34,8 @@ function createWindow () {
     }
   })
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
   mainWindow.maximize();
+  mainWindow.loadFile('index.html')
 
   // Open the DevTools.
    mainWindow.webContents.openDevTools()
@@ -44,6 +45,8 @@ function createWindow () {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
+  const { screen } = require('electron');
+  const size = screen.getPrimaryDisplay().workAreaSize;
   createWindow()
 
   app.on('activate', function () {
