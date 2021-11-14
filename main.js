@@ -14,8 +14,7 @@ function createWindow () {
     title: "main window",
     webPreferences: {
        enableRemoteModule: true, nodeIntegration: true, contextIsolation: false
-    },
-    type: "desktop"
+    }
   })
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
