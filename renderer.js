@@ -8,3 +8,9 @@ var $ = require( "jquery" );
 //const bootstrap = require('bootstrap');
 window.$ = $;
 require('bootstrap');
+$("#shut").click(function(){
+    exec('shutdown now');
+  });
+  $("#restart").click(function(){
+      exec('shutdown -r');
+    });
