@@ -7,12 +7,12 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    type: "desktop",
     "fullscreen": true,
     "title": "main window",
     webPreferences: {
        enableRemoteModule: true, nodeIntegration: true, contextIsolation: false
-    }
+    },
+    type: "desktop"
   })
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
