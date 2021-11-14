@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <!--<link href="./styles.css" rel="stylesheet">-->
+    <link href="style.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>scriptOS</title>
@@ -13,27 +13,34 @@
     <script src="renderer.js"></script>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">scriptOS</a>
+    <a class="navbar-brand" href="index.html">scriptOS</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Apps</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="test.html" target="_blank">Link</a></li>
+            <li><a class="dropdown-item" href="test2.html" target="_blank">Another link</a></li>
+            <li><a class="dropdown-item" href="#">A third link</a></li>
+          </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Files</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Link</a></li>
-            <li><a class="dropdown-item" href="#">Another link</a></li>
-            <li><a class="dropdown-item" href="#">A third link</a></li>
+            <li><a class="dropdown-item" href="test.html" target="_blank">Files</a></li>
+            <li><a class="dropdown-item" href="test2.html" target="_blank">Downloads</a></li>
+            <li><a class="dropdown-item" href="#">Pictures</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Shutdown</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="test.html" target="_blank">Shutdown</a></li>
+            <li><a class="dropdown-item" href="test2.html" target="_blank">Restart</a></li>
+            <li><a class="dropdown-item" href="#">Reload</a></li>
           </ul>
         </li>
       </ul>
