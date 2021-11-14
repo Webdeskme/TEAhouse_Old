@@ -12,7 +12,7 @@ const remote = require('electron').remote;
   const {ipcRenderer} = require('electron');
 var exec = require('child_process').exec;
 $("#shut").click(function(){
-    exec('shutdown now');
+    exec('shutdown -h now');
   });
   $("#restart").click(function(){
       exec('shutdown -r');
