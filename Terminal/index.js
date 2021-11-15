@@ -6,8 +6,8 @@ $('body').terminal({
     help: function() {
         this.echo('ls: list\ncd "dir": change dir\ncat "file": read file\nopen "file": opens file\nrun "app": reun an app\ngit clone: add app or theme\ngit pull: update app or theme');
     },
-    ls: function(home, d) {
-        this.echo('testing');
+    ls: function() {
+        this.echo('testing' + d);
     }
   },
     {
