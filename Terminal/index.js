@@ -1,5 +1,3 @@
-var $ = require( "jquery" );
-window.$ = $;
 // In body tag
 $('body').terminal({
 	iam: function (name) {
