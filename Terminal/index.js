@@ -1,8 +1,10 @@
+var fs = require('fs-extra');
+const homedir = require('os').homedir();
 $('body').terminal({
-    hello: function(what) {
-        this.echo('Hello, ' + what + '. Wellcome to this terminal.');
+    help: function() {
+        this.echo('ls: list\ncd "dir": change dir\ncat "file": read file\nopen "file": opens file\nrun "app": reun an app\ngit clone: add app or theme\ngit pull: update app or theme');
     }
   },
     {
-        greetings: greetings.innerHTML + '\n\nShip: SANS504 \nChief Security Officer \nhelp to start. \ntype exit to exit\n\n'
+        greetings: greetings.innerHTML + '\n\nType help if you need it.\n\n'
 });
