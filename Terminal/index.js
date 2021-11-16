@@ -29,6 +29,9 @@ $('body').terminal({
     },
     pwd: function() {
       this.echo(d);
+    },
+    cat: function(file) {
+      this.echo(fs.readdirSync(home + d + file);
     }
   },
     {
