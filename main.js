@@ -47,8 +47,11 @@ function createWindow () {
 app.whenReady().then(() => {
   //const { screen } = require('electron');
   const { exec } = require('child_process');
-  globalShortcut.register('control+T', () => {
+  globalShortcut.register('Alt+Control+T', () => {
     exec('x-terminal-emulator');
+  })
+  globalShortcut.register('Control+T', () => {
+    window.open('Terminal/index.html', '_blank', 'top=500,left=200,frame=true, enableRemoteModule: true, nodeIntegration: true, contextIsolation: false');
   })
   const size = screen.getPrimaryDisplay().workAreaSize;
   createWindow()
