@@ -50,6 +50,9 @@ app.whenReady().then(() => {
   globalShortcut.register('Alt+Control+T', () => {
     exec('x-terminal-emulator');
   })
+  globalShortcut.register('Alt+Control+B', () => {
+    exec('midori');
+  })
   globalShortcut.register('Control+T', () => {
     const terminal = new BrowserWindow({
       width: 800,
