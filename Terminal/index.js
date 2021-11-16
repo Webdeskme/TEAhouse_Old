@@ -7,17 +7,20 @@ $('body').terminal({
         this.echo('ls: list\ncd "dir": change dir\ncat "file": read file\nopen "file": opens file\nrun "app": reun an app\ngit clone: add app or theme\ngit pull: update app or theme');
     },
     ls: function() {
-      console.log(home + d);
+      //console.log(home + d);
       fs.readdir(home + d, (err, list) => {
         list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
         var e = '';
         list.forEach(myApps);
       function myApps(item) {
-        console.log(item);
+        //console.log(item);
         e += item + '\n';
       }
       this.echo(e);
       });
+    },
+    cd: function(di) {
+      d += di;
     }
   },
     {
