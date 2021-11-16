@@ -61,7 +61,7 @@ app.whenReady().then(() => {
       }
     })
     // and load the index.html of the app.
-    mainWindow.loadFile('Terminal/index.html')
+    terminal.loadFile('Terminal/index.html')
   })
   const size = screen.getPrimaryDisplay().workAreaSize;
   createWindow()
