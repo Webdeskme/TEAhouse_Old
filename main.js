@@ -47,13 +47,13 @@ function createWindow () {
 app.whenReady().then(() => {
   //const { screen } = require('electron');
   const { exec } = require('child_process');
-  globalShortcut.register('Alt+Control+T', () => {
+  globalShortcut.register('Alt+Control+X', () => {
     exec('x-terminal-emulator');
   })
   globalShortcut.register('Alt+Control+B', () => {
     exec('midori');
   })
-  globalShortcut.register('Home+T', () => {
+  globalShortcut.register('Alt+Control+T', () => {
     const terminal = new BrowserWindow({
       width: 800,
     height: 400,
