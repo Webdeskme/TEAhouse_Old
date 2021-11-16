@@ -10,6 +10,9 @@ $("#shut").click(function(){
 $("#restart").click(function(){
   exec('sudo shutdown -r now');
 });
+$("#ft").click(function(){
+  exec('x-terminal-emulator');
+});
 fs.readdir(homedir + '/usr/admin/Apps/', (err, list) => {
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
   list.forEach(myApps);
