@@ -31,7 +31,8 @@ $('body').terminal({
       this.echo(d);
     },
     cat: function(file) {
-      this.echo(fs.readdirSync(home + d + file));
+      var ca = fs.readdirSync(home + d + file);
+      this.echo(ca);
     }
   },
     {
