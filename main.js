@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, screen, globalShortcut} = require('electron')
 //const path = require('path')
 const electron = require('electron');
 //const { screen } = require('electron');
@@ -45,7 +45,11 @@ function createWindow () {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
-  const { screen } = require('electron');
+  //const { screen } = require('electron');
+  const { exec } = require('child_process');
+  globalShortcut.register('control+T', () => {
+    exec('x-terminal-emulator');
+  })
   const size = screen.getPrimaryDisplay().workAreaSize;
   createWindow()
 
