@@ -1,7 +1,7 @@
 var fs = require('fs-extra');
 const homedir = require('os').homedir();
 var d = '/';
-var home = homedir + '/user/admin';
+var home = homedir + '/usr/admin';
 $('body').terminal({
     help: function() {
         this.echo('ls: list\ncd "dir": change dir\ncat "file": read file\nopen "file": opens file\nrun "app": reun an app\ngit clone: add app or theme\ngit pull: update app or theme');
