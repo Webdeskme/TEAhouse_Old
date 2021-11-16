@@ -10,11 +10,14 @@ $("#shut").click(function(){
 $("#restart").click(function(){
   exec('sudo shutdown -r now');
 });
+$("#lock").click(function(){
+  exec('i3lock');
+});
 $("#ft").click(function(){
   exec('x-terminal-emulator');
 });
 $("#fi").click(function(){
-  exec('dolphin');
+  exec('xfe');
 });
 fs.readdir(homedir + '/usr/admin/Apps/', (err, list) => {
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
