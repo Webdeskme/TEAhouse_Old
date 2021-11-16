@@ -10,11 +10,13 @@ $('body').terminal({
       console.log(home + d);
       fs.readdir(home + d, (err, list) => {
         list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
+        var e = '';
         list.forEach(myApps);
       function myApps(item) {
         console.log(item);
-        this.echo(item + '\n');
+        e += item + '\n';
       }
+      this.echo(e);
       });
     }
   },
