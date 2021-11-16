@@ -24,7 +24,7 @@ $('body').terminal({
 
       }
       else{
-        d += di;
+        d += di + '/';
       }
     },
     pwd: function() {
