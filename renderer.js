@@ -13,6 +13,9 @@ $("#restart").click(function(){
 $("#ft").click(function(){
   exec('x-terminal-emulator');
 });
+$("#fi").click(function(){
+  exec('dolphin');
+});
 fs.readdir(homedir + '/usr/admin/Apps/', (err, list) => {
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
   list.forEach(myApps);
