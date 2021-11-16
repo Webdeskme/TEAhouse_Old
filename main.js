@@ -51,7 +51,17 @@ app.whenReady().then(() => {
     exec('x-terminal-emulator');
   })
   globalShortcut.register('Control+T', () => {
-    window.open('Terminal/index.html', '_blank', 'top=500,left=200,frame=true, enableRemoteModule: true, nodeIntegration: true, contextIsolation: false');
+    const terminal = new BrowserWindow({
+      width: 800,
+    height: 400,
+    frame: true,
+      "title": "Terminal",
+      webPreferences: {
+         enableRemoteModule: true, nodeIntegration: true, contextIsolation: false
+      }
+    })
+    // and load the index.html of the app.
+    mainWindow.loadFile('Terminal/index.html')
   })
   const size = screen.getPrimaryDisplay().workAreaSize;
   createWindow()
