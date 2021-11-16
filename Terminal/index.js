@@ -20,7 +20,15 @@ $('body').terminal({
       });
     },
     cd: function(di) {
-      d += di;
+      if(di == '../'){
+
+      }
+      else{
+        d += di;
+      }
+    },
+    pwd: function() {
+      this.echo(d);
     }
   },
     {
