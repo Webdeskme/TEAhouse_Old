@@ -66,7 +66,10 @@ fs.readdir('/usr/share/applications/', (err, list) => {
 
 
           //var xx = 0;
-          lineReader.on('line', function (line2) {
+          var lineReader2 = require('readline').createInterface({
+            input: require('fs').createReadStream('/usr/share/applications/' + item)
+          });
+          lineReader2.on('line', function (line2) {
             //console.log('Line from file:', line);
             console.log(line2);
             if(line2.startsWith("Name=") == true){
