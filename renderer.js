@@ -50,7 +50,7 @@ fs.readdir('/usr/share/applications/', (err, list) => {
   list.forEach(mApps);
   function mApps(item) {
     //console.log(item);
-    var data = fs.readFileSync('/Users/joe/test.txt', 'utf8');
+    var data = fs.readFileSync('/usr/share/applications/' + item, 'utf8');
     console.log(data);
   }
 });
