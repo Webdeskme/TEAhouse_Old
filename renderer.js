@@ -19,7 +19,7 @@ $("#ft").click(function(){
 $("#fi").click(function(){
   exec('xfe');
 });
-fs.readdir(homedir + '/usr/admin/Apps/', (err, list) => {
+fs.readdir(homedir + '/Apps/', (err, list) => {
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
   list.forEach(myApps);
 function myApps(item) {
