@@ -53,15 +53,20 @@ fs.readdir('/usr/share/applications/', (err, list) => {
     var lineReader = require('readline').createInterface({
       input: require('fs').createReadStream('/usr/share/applications/' + item)
     });
-
+    var xx = 0;
     lineReader.on('line', function (line) {
       //console.log('Line from file:', line);
       if(line.startsWith("Name=") == true){
         line = line.slice(5);
         if(line != 'UXTerm' && line != 'Htop' && line != 'Tint2' && line != 'Vim' && line != 'Tint2 Settings'){
-          line = line.toLowerCase();
+          var ex = line.toLowerCase();
           console.log(line);
-          $("#apps").append('<li><a class="dropdown-item" href="#" onclick="exec(' + line + ');">' + line + '</a></li>');
+          xx += 1;
+          var te = 'app' + xx;
+          $("#apps").append('<li><a class="dropdown-item" href="#" id="' + te + '">' + line + '</a></li>');
+          $("#" + te).click(function(){
+            exec(ex);
+          });
         }
       }
     });
