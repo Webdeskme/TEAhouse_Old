@@ -68,6 +68,7 @@ fs.readdir('/usr/share/applications/', (err, list) => {
           //var xx = 0;
           lineReader.on('line', function (line2) {
             //console.log('Line from file:', line);
+            console.log('test');
             if(line2.startsWith("Name=") == true){
               line2 = line2.slice(5);
               console.log('line2');
