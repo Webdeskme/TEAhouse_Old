@@ -69,6 +69,7 @@ fs.readdir('/usr/share/applications/', (err, list) => {
           lineReader.on('line', function (line2) {
             //console.log('Line from file:', line);
             if(line2.startsWith("Name=") == true){
+              line2 = line2.slice(5);
               $("#apps").append('<li><a class="dropdown-item" href="#" id="' + line2 + '">' + line2 + '</a></li>');
               $("#" + line2).click(function(){
                 exec(line);
