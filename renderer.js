@@ -53,7 +53,7 @@ fs.readdir('/usr/share/applications/', (err, list) => {
     var lineReader = require('readline').createInterface({
       input: require('fs').createReadStream('/usr/share/applications/' + item)
     });
-    var xx = 0;
+    //var xx = 0;
     lineReader.on('line', function (line) {
       //console.log('Line from file:', line);
       if(line.startsWith("Exec=") == true){
@@ -61,17 +61,17 @@ fs.readdir('/usr/share/applications/', (err, list) => {
         if(line != 'UXTerm' && line != 'Htop' && line != 'Tint2' && line != 'Vim' && line != 'Tint2 Settings' && line != 'Python (v2.7)' && line != 'Python (v3.7)'){
           var ex = line.toLowerCase();
           console.log(line);
-          xx += 1;
+          //xx += 1;
           var te = 'app' + xx;
 
 
-          var xx = 0;
+          /var xx = 0;
           lineReader.on('line', function (line2) {
             //console.log('Line from file:', line);
             if(line2.startsWith("Name=") == true){
-              $("#apps").append('<li><a class="dropdown-item" href="#" id="' + ex + '">' + line + '</a></li>');
-              $("#" + ex).click(function(){
-                exec(line2);
+              $("#apps").append('<li><a class="dropdown-item" href="#" id="' + line2 + '">' + line2 + '</a></li>');
+              $("#" + line2).click(function(){
+                exec(line);
               });
             };
           });
