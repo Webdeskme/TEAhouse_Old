@@ -63,12 +63,22 @@ fs.readdir('/usr/share/applications/', (err, list) => {
           console.log(line);
           xx += 1;
           var te = 'app' + xx;
-          $("#apps").append('<li><a class="dropdown-item" href="#" id="' + ex + '">' + line + '</a></li>');
-          console.log('<li><a class="dropdown-item" href="#" id="' + ex + '">' + line + '</a></li>');
-          $("#" + ex).click(function(){
-            console.log(ex);
-            exec(ex);
+
+          var lineReader2 = require('readline').createInterface({
+
+          var xx = 0;
+          lineReader.on('line', function (line2) {
+            //console.log('Line from file:', line);
+            if(line2.startsWith("Name=") == true){
+              $("#apps").append('<li><a class="dropdown-item" href="#" id="' + ex + '">' + line + '</a></li>');
+              console.log('<li><a class="dropdown-item" href="#" id="' + ex + '">' + line + '</a></li>');
+              $("#" + ex).click(function(){
+                console.log(line2);
+                exec(line2);
+              });
+            });
           });
+
         }
       }
     });
