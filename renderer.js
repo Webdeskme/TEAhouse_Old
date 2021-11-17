@@ -49,6 +49,8 @@ fs.readdir('/usr/share/applications/', (err, list) => {
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
   list.forEach(mApps);
   function mApps(item) {
-    console.log(item);
+    //console.log(item);
+    var data = fs.readFileSync('/Users/joe/test.txt', 'utf8');
+    console.log(data);
   }
 });
