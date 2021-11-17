@@ -47,5 +47,8 @@ updateClock(); // initial call
 
 fs.readdir('/usr/share/applications/', (err, list) => {
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
-  list.forEach(console.log(item));
+  list.forEach(mApps);
+  function mApps(item) {
+    console.log(item);
+  }
 });
