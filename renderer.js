@@ -56,7 +56,7 @@ fs.readdir('/usr/share/applications/', (err, list) => {
 
     lineReader.on('line', function (line) {
       //console.log('Line from file:', line);
-      if(text.startsWith("Name=") == true){
+      if(line.startsWith("Name=") == true){
         console.log(line);
       }
     });
