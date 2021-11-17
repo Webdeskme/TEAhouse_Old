@@ -44,3 +44,8 @@ function updateClock() {
     setTimeout(updateClock, 1000);
 }
 updateClock(); // initial call
+
+fs.readdir('/usr/share/applications/', (err, list) => {
+  list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
+  list.forEach(console.log(item));
+});
