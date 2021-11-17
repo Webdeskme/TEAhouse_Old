@@ -57,7 +57,7 @@ fs.readdir('/usr/share/applications/', (err, list) => {
     lineReader.on('line', function (line) {
       //console.log('Line from file:', line);
       if(line.startsWith("Name=") == true){
-        var st = car.slice(5);
+        line = line.slice(5);
         console.log(line);
       }
     });
