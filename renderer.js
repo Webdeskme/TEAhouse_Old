@@ -64,7 +64,6 @@ fs.readdir('/usr/share/applications/', (err, list) => {
           xx += 1;
           var te = 'app' + xx;
 
-          var lineReader2 = require('readline').createInterface({
 
           var xx = 0;
           lineReader.on('line', function (line2) {
