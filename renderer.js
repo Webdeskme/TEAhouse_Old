@@ -53,10 +53,11 @@ fs.readdir('/usr/share/applications/', (err, list) => {
     var lineReader = require('readline').createInterface({
       input: require('fs').createReadStream('/usr/share/applications/' + item)
     });
-    //var xx = 0;
+    var xx = 'yes';
     lineReader.on('line', function (line) {
       //console.log('Line from file:', line);
-      if(line.startsWith("Exec=") == true){
+      if(line.startsWith("Exec=") == true && xx == 'yes'){
+        xx = 'no';
         line = line.slice(5);
           var ex = line.toLowerCase();
           //console.log(line);
