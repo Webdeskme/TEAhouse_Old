@@ -58,7 +58,7 @@ fs.readdir('/usr/share/applications/', (err, list) => {
       //console.log('Line from file:', line);
       if(line.startsWith("Name=") == true){
         line = line.slice(5);
-        if(line != 'UXTerm' && line != 'Htop' && line != 'Tint2' && line != 'Vim' && line != 'Tint2 Settings'){
+        if(line != 'UXTerm' && line != 'Htop' && line != 'Tint2' && line != 'Vim' && line != 'Tint2 Settings' && line != 'Python (v2.7)' && line != 'Python (v3.7)'){
           var ex = line.toLowerCase();
           console.log(line);
           xx += 1;
