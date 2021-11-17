@@ -58,7 +58,6 @@ fs.readdir('/usr/share/applications/', (err, list) => {
       //console.log('Line from file:', line);
       if(line.startsWith("Exec=") == true){
         line = line.slice(5);
-        if(line != 'UXTerm' && line != 'Htop' && line != 'Tint2' && line != 'Vim' && line != 'Tint2 Settings' && line != 'Python (v2.7)' && line != 'Python (v3.7)'){
           var ex = line.toLowerCase();
           //console.log(line);
           //xx += 1;
@@ -75,14 +74,16 @@ fs.readdir('/usr/share/applications/', (err, list) => {
             if(line2.startsWith("Name=") == true){
               line2 = line2.slice(5);
               //console.log('line2');
+              if(line != 'UXTerm' && line != 'Htop' && line != 'Tint2' && line != 'Vim' && line != 'Tint2 Settings' && line != 'Python (v2.7)' && line != 'Python (v3.7)'){
               $("#apps").append('<li><a class="dropdown-item" href="#" id="' + line2 + '" title="' + line + '">' + line2 + '</a></li>');
               $("#" + line2).click(function(){
                 exec(line);
               });
             }
+            }
           });
 
-        }
+        //}
       }
     });
     //var data = fs.readFileSync('/usr/share/applications/' + item, 'utf8');
