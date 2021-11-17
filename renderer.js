@@ -65,7 +65,7 @@ fs.readdir('/usr/share/applications/', (err, list) => {
           var te = 'app' + xx;
 
 
-          /var xx = 0;
+          //var xx = 0;
           lineReader.on('line', function (line2) {
             //console.log('Line from file:', line);
             if(line2.startsWith("Name=") == true){
