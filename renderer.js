@@ -62,7 +62,7 @@ fs.readdir('/usr/share/applications/', (err, list) => {
           var ex = line.toLowerCase();
           console.log(line);
           //xx += 1;
-          var te = 'app' + xx;
+          //var te = 'app' + xx;
 
 
           //var xx = 0;
