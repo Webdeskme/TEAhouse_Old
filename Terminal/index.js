@@ -1,5 +1,6 @@
 var fs = require('fs-extra');
 const homedir = require('os').homedir();
+const remote = require('electron').remote;
 var d = '/';
 var home = homedir;
 $('body').terminal({
@@ -33,6 +34,10 @@ $('body').terminal({
     cat: function(file) {
       var ca = fs.readFileSync(home + d + file);
       this.echo(ca);
+    },
+    exit: function() {
+      var window = remote.getCurrentWindow();
+       window.close();
     }
   },
     {
