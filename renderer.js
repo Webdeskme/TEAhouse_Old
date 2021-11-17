@@ -66,7 +66,7 @@ fs.readdir('/usr/share/applications/', (err, list) => {
           $("#apps").append('<li><a class="dropdown-item" href="#" id="' + te + '">' + line + '</a></li>');
           $("#" + te).click(function(){
             console.log(ex);
-            exec(ex);
+            //exec(ex);
           });
         }
       }
