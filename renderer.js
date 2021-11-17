@@ -11,7 +11,7 @@ $("#restart").click(function(){
   exec('sudo shutdown -r now');
 });
 $("#lock").click(function(){
-  exec('i3lock');
+  exec('i3lock -i teaos.png --image-fill');
 });
 $("#ft").click(function(){
   exec('x-terminal-emulator');
