@@ -60,7 +60,7 @@ fs.readdir('/usr/share/applications/', (err, list) => {
         line = line.slice(5);
         if(line != 'UXTerm' && line != 'Htop' && line != 'Tint2' && line != 'Vim' && line != 'Tint2 Settings' && line != 'Python (v2.7)' && line != 'Python (v3.7)'){
           var ex = line.toLowerCase();
-          console.log(line);
+          //console.log(line);
           //xx += 1;
           //var te = 'app' + xx;
 
@@ -71,10 +71,10 @@ fs.readdir('/usr/share/applications/', (err, list) => {
           });
           lineReader2.on('line', function (line2) {
             //console.log('Line from file:', line);
-            console.log(line2);
+            //console.log(line2);
             if(line2.startsWith("Name=") == true){
               line2 = line2.slice(5);
-              console.log('line2');
+              //console.log('line2');
               $("#apps").append('<li><a class="dropdown-item" href="#" id="' + line2 + '">' + line2 + '</a></li>');
               $("#" + line2).click(function(){
                 exec(line);
