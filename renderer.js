@@ -70,12 +70,10 @@ fs.readdir('/usr/share/applications/', (err, list) => {
             //console.log('Line from file:', line);
             if(line2.startsWith("Name=") == true){
               $("#apps").append('<li><a class="dropdown-item" href="#" id="' + ex + '">' + line + '</a></li>');
-              console.log('<li><a class="dropdown-item" href="#" id="' + ex + '">' + line + '</a></li>');
               $("#" + ex).click(function(){
-                console.log(line2);
                 exec(line2);
               });
-            });
+            };
           });
 
         }
