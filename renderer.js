@@ -56,7 +56,7 @@ fs.readdir('/usr/share/applications/', (err, list) => {
     var xx = 0;
     lineReader.on('line', function (line) {
       //console.log('Line from file:', line);
-      if(line.startsWith("Name=") == true){
+      if(line.startsWith("Exec=") == true){
         line = line.slice(5);
         if(line != 'UXTerm' && line != 'Htop' && line != 'Tint2' && line != 'Vim' && line != 'Tint2 Settings' && line != 'Python (v2.7)' && line != 'Python (v3.7)'){
           var ex = line.toLowerCase();
