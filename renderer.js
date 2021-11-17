@@ -58,7 +58,9 @@ fs.readdir('/usr/share/applications/', (err, list) => {
       //console.log('Line from file:', line);
       if(line.startsWith("Name=") == true){
         line = line.slice(5);
-        console.log(line);
+        if(line != 'UXTerm' && line != 'Htop' && line != 'Tint2' && line != 'Vim' && line != 'Tint2 Settings'){
+          console.log(line);
+        }
       }
     });
     //var data = fs.readFileSync('/usr/share/applications/' + item, 'utf8');
