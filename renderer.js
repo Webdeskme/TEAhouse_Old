@@ -75,7 +75,7 @@ fs.readdir('/usr/share/applications/', (err, list) => {
             if(line2.startsWith("Name=") == true){
               line2 = line2.slice(5);
               //console.log('line2');
-              $("#apps").append('<li><a class="dropdown-item" href="#" id="' + line2 + '">' + line2 + '</a></li>');
+              $("#apps").append('<li><a class="dropdown-item" href="#" id="' + line2 + '" title="' + line + '">' + line2 + '</a></li>');
               $("#" + line2).click(function(){
                 exec(line);
               });
