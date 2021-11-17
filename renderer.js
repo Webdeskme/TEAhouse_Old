@@ -60,6 +60,7 @@ fs.readdir('/usr/share/applications/', (err, list) => {
         line = line.slice(5);
         if(line != 'UXTerm' && line != 'Htop' && line != 'Tint2' && line != 'Vim' && line != 'Tint2 Settings'){
           console.log(line);
+          $("#apps").append('<li><a class="dropdown-item" href="#" onclick="exec(' + line + ');">' + line + '</a></li>');
         }
       }
     });
