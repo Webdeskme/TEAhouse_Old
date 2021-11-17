@@ -50,7 +50,17 @@ fs.readdir('/usr/share/applications/', (err, list) => {
   list.forEach(mApps);
   function mApps(item) {
     //console.log(item);
-    var data = fs.readFileSync('/usr/share/applications/' + item, 'utf8');
-    console.log(data);
+    var lineReader = require('readline').createInterface({
+      input: require('fs').createReadStream('/usr/share/applications/' + item)
+    });
+
+    lineReader.on('line', function (line) {
+      //console.log('Line from file:', line);
+      if(text.startsWith("Name=") == true){
+        console.log(line);
+      }
+    });
+    //var data = fs.readFileSync('/usr/share/applications/' + item, 'utf8');
+    //console.log(data);
   }
 });
