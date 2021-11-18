@@ -53,6 +53,9 @@ app.whenReady().then(() => {
   globalShortcut.register('Alt+Control+B', () => {
     exec('midori');
   })
+  globalShortcut.register('Alt+Control+Delete', () => {
+    exec('conky');
+  })
   globalShortcut.register('Alt+Control+D', () => {
     exec('xfe');
   })
