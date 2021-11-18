@@ -5,10 +5,10 @@ const { exec } = require('child_process');
 var fs = require('fs-extra');
 const homedir = require('os').homedir();
 $("#shut").click(function(){
-  exec('sudo shutdown -h now');
+  exec('shutdown -h now');
 });
 $("#restart").click(function(){
-  exec('sudo shutdown -r now');
+  exec('shutdown -r now');
 });
 $("#lock").click(function(){
   exec('i3lock -i teaos.png');
