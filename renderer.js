@@ -19,6 +19,9 @@ $("#ft").click(function(){
 $("#fi").click(function(){
   exec('xfe');
 });
+$("#s").click(function(){
+  exec('gnome-control-center');
+});
 fs.readdir(homedir + '/Apps/Tea/', (err, list) => {
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
   list.forEach(myApps);
