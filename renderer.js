@@ -22,6 +22,7 @@ $("#fi").click(function(){
 $("#s").click(function(){
   exec('gnome-control-center');
 });
+console.log(homedir + '/Apps/Tea/');
 fs.readdir(homedir + '/Apps/Tea/', (err, list) => {
   if(err){
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
