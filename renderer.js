@@ -23,10 +23,12 @@ $("#s").click(function(){
   exec('gnome-control-center');
 });
 fs.readdir(homedir + '/Apps/Tea/', (err, list) => {
+  if(err){
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
   list.forEach(myApps);
 function myApps(item) {
   $("#apps").append('<li><a class="dropdown-item" href="' + homedir + '/Apps/' + item + '/index.html" target="_blank">' + item + '</a></li>');
+}
 }
 });
 fs.readdir(homedir + '/Apps/Node/', (err, list) => {
