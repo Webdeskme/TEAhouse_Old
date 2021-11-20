@@ -28,10 +28,27 @@ fs.readdir(homedir + '/Apps/Tea/', (err, list) => {
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
   list.forEach(myApps);
 function myApps(item) {
-  $("#apps").append('<li><a class="dropdown-item" href="' + homedir + '/Apps/' + item + '/index.html" target="_blank">' + item + '</a></li>');
+  $("#apps").append('<li><a class="dropdown-item" href="' + homedir + '/Apps/' + item + '/index.html" id="' + item + '">' + item + '</a></li>');
+  $("#" + item.click(function(){
+    //window.open('homedir + '/Apps/' + item + '/index.html', '_blank', 'top=500,left=200,frame=true, enableRemoteModule: true, nodeIntegration: true, contextIsolation: false');
+    createBrowserappWindow(homedir + '/Apps/' + item);
+  });
 }
 }
 });
+function createBrowserappWindow(url) {
+const remote = require('@electron/remote');
+const BrowserWindow = remote.BrowserWindow;
+const win = new BrowserWindow({
+  width: 400,
+  height: 300,
+  minWidth: 400,
+  minHeight: 300,
+  webPreferences: { enableRemoteModule: false, nodeIntegration: false, contextIsolation: true }
+});
+win.setAlwaysOnTop(true);
+win.loadURL(url);
+}
 fs.readdir(homedir + '/Apps/Node/', (err, list) => {
   if(!err){
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
