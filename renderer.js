@@ -63,7 +63,7 @@ function updateClock() {
 }
 updateClock(); // initial call
 
-fs.readdir('/usr/share/applications/', (err, list) => {
+/*fs.readdir('/usr/share/applications/', (err, list) => {
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
   list.forEach(mApps);
   function mApps(item) {
@@ -97,7 +97,7 @@ fs.readdir('/usr/share/applications/', (err, list) => {
               sid = line2.replace(/\s/g, '');
               sid = line2.replace('&', '');
               //console.log('line2');
-              if(line2 != 'UXTerm' && line2 != 'Htop' && line2 != 'Tint2' && line2 != 'Vim' && line2 != 'Tint2 Settings' && line2 != 'Python (v2.7)' && line2 != 'Python (v3.7)' && line2 != 'New Private Browsing Window' && line2 != 'ClipIt' && line2 != 'Access Prompt' && line2 != 'View file' && line2 != 'Network' && line2 != 'Advanced Network Configuration' && line2 != 'Notification Daemon' && line2 != 'Handler for snap:// URIs'){
+              if(line2 != 'UXTerm' && line2 != 'Htop' && line2 != 'Tint2' && line2 != 'Vim' && line2 != 'Tint2 Settings' && line2 != 'Python (v2.7)' && line2 != 'Python (v3.8)' && line2 != 'Python (v3.7)' && line2 != 'New Private Browsing Window' && line2 != 'ClipIt' && line2 != 'Access Prompt' && line2 != 'View file' && line2 != 'Network' && line2 != 'Advanced Network Configuration' && line2 != 'Notification Daemon' && line2 != 'Handler for snap:// URIs'){
               $("#apps").append('<li><a class="dropdown-item" href="#" id="' + sid + '" title="' + line + '">' + line2 + '</a></li>');
               $("#" + sid).click(function(){
                 line = line.split(" ")[0];
@@ -113,7 +113,7 @@ fs.readdir('/usr/share/applications/', (err, list) => {
     //var data = fs.readFileSync('/usr/share/applications/' + item, 'utf8');
     //console.log(data);
   }
-});
+});*/
 
 // Search
 $("#go").click(function(){
