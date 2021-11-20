@@ -24,7 +24,7 @@ $("#s").click(function(){
 });
 console.log(homedir + '/Apps/Tea/');
 fs.readdir(homedir + '/Apps/Tea/', (err, list) => {
-  if(err){
+  if(!err){
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
   list.forEach(myApps);
 function myApps(item) {
