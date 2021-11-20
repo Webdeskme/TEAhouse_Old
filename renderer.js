@@ -30,6 +30,7 @@ function myApps(item) {
 }
 });
 fs.readdir(homedir + '/Apps/Node/', (err, list) => {
+  if(!err){
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
   list.forEach(myApps);
 function myApps(item) {
@@ -38,6 +39,7 @@ function myApps(item) {
   $("#" + sid).click(function(){
     exec('npm --prefix ' + homedir + '/Apps/Node/ test');
   });
+}
 }
 });
 function formatDate(date) {
