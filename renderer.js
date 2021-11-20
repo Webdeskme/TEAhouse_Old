@@ -108,6 +108,26 @@ fs.readdir('/usr/share/applications/', (err, list) => {
   }
 });
 
+// Search
+$("#go").click(function(){
+  var url = $("#url").val();
+  //window.location.replace(url);
+  createBrowserWindow(url);
+});
+function createBrowserWindow(url) {
+const remote = require('@electron/remote');
+const BrowserWindow = remote.BrowserWindow;
+const win = new BrowserWindow({
+  width: 400,
+  height: 300,
+  minWidth: 400,
+  minHeight: 300,
+  webPreferences: { enableRemoteModule: false, nodeIntegration: false, contextIsolation: true }
+});
+win.setAlwaysOnTop(true);
+win.loadURL('https://duckduckgo.com/?q=' + url);
+}
+
 // updateClock
 
 const hourHand = document.querySelector('.hand-hour');
