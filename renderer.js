@@ -111,10 +111,11 @@ fs.readdir('/usr/share/applications/', (err, list) => {
 // Search
 $("#go").click(function(){
   var url = $("#url").val();
+  window.open(url, '_blank', 'top=500,left=200,frame=true, enableRemoteModule: true, nodeIntegration: true, contextIsolation: false')"
   //window.location.replace(url);
-  createBrowserWindow(url);
+  //createBrowserWindow(url);
 });
-function createBrowserWindow(url) {
+/*function createBrowserWindow(url) {
 const remote = require('@electron/remote');
 const BrowserWindow = remote.BrowserWindow;
 const win = new BrowserWindow({
@@ -126,7 +127,7 @@ const win = new BrowserWindow({
 });
 win.setAlwaysOnTop(true);
 win.loadURL('https://duckduckgo.com/?q=' + url);
-}
+}*/
 
 // updateClock
 
