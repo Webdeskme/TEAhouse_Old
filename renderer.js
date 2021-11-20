@@ -29,7 +29,7 @@ fs.readdir(homedir + '/Apps/Tea/', (err, list) => {
   list.forEach(myApps);
 function myApps(item) {
   $("#apps").append('<li><a class="dropdown-item" href="' + homedir + '/Apps/' + item + '/index.html" id="' + item + '">' + item + '</a></li>');
-  $("#" + item.click(function(){
+  $("#" + item).click(function(){
     //window.open('homedir + '/Apps/' + item + '/index.html', '_blank', 'top=500,left=200,frame=true, enableRemoteModule: true, nodeIntegration: true, contextIsolation: false');
     createBrowserappWindow(homedir + '/Apps/' + item);
   });
