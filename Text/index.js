@@ -3,7 +3,7 @@ window.$ = $;
 require('bootstrap');
 var fs = require('fs-extra');
 const homedir = require('os').homedir();
-var root = '/Documents/';
+var root = '/';
 $("#save").click(function(){
   var con = $("#con").text();
   var title = $("#title").text();
