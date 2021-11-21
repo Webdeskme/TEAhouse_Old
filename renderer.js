@@ -4,6 +4,7 @@ require('bootstrap');
 const { exec } = require('child_process');
 var fs = require('fs-extra');
 const homedir = require('os').homedir();
+const remote = require('@electron/remote');
 $("#shut").click(function(){
   exec('shutdown -h now');
 });
@@ -33,22 +34,22 @@ function myApps(item) {
     //window.open('homedir + '/Apps/' + item + '/index.html', '_blank', 'top=500,left=200,frame=true, enableRemoteModule: true, nodeIntegration: true, contextIsolation: false');
     createBrowserappWindow(homedir + '/Apps/' + item);
   });
+  function createBrowserappWindow(url) {
+  //const remote = require('@electron/remote');
+  const BrowserWindow = remote.BrowserWindow;
+  const win = new BrowserWindow({
+    width: 400,
+    height: 300,
+    minWidth: 400,
+    minHeight: 300,
+    webPreferences: { enableRemoteModule: false, nodeIntegration: false, contextIsolation: true }
+  });
+  win.setAlwaysOnTop(true);
+  win.loadURL(url);
+  }
 }
 }
 });
-function createBrowserappWindow(url) {
-const remote = require('@electron/remote');
-const BrowserWindow = remote.BrowserWindow;
-const win = new BrowserWindow({
-  width: 400,
-  height: 300,
-  minWidth: 400,
-  minHeight: 300,
-  webPreferences: { enableRemoteModule: false, nodeIntegration: false, contextIsolation: true }
-});
-win.setAlwaysOnTop(true);
-win.loadURL(url);
-}
 fs.readdir(homedir + '/Apps/Node/', (err, list) => {
   if(!err){
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
@@ -141,7 +142,7 @@ $("#go").click(function(){
   createBrowserWindow(url);
 });
 function createBrowserWindow(url) {
-const remote = require('@electron/remote');
+//const remote = require('@electron/remote');
 const BrowserWindow = remote.BrowserWindow;
 const win = new BrowserWindow({
   width: 400,
