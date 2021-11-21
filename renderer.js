@@ -140,6 +140,7 @@ $("#go").click(function(){
   var url = $("#url").val();
   //window.open('https://duckduckgo.com/?q=' + url, '_blank', 'top=500,left=200,frame=true, enableRemoteModule: true, nodeIntegration: true, contextIsolation: false').setalwaysontop("true");
   //window.location.replace(url);
+  $("#url").value() = "";
   createBrowserWindow(url);
 });
 function createBrowserWindow(url) {
