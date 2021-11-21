@@ -32,8 +32,8 @@ function myApps(item) {
   $("#apps").append('<li><a class="dropdown-item" href="#" id="' + item + '">' + item + '</a></li>');
   $("#" + item).click(function(){
     //window.open('homedir + '/Apps/' + item + '/index.html', '_blank', 'top=500,left=200,frame=true, enableRemoteModule: true, nodeIntegration: true, contextIsolation: false');
-    //createBrowserappWindow(homedir + '/Apps/' + item);
-    console.log('test');
+    createBrowserappWindow(homedir + '/Apps/' + item);
+    //console.log('test');
   });
   function createBrowserappWindow(url1) {
   //const remote = require('@electron/remote');
