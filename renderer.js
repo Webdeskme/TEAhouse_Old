@@ -145,15 +145,15 @@ $("#go").click(function(){
 function createBrowserWindow(url) {
 //const remote = require('@electron/remote');
 const BrowserWindow = remote.BrowserWindow;
-const win3 = new BrowserWindow({
+const win = new BrowserWindow({
   width: 400,
   height: 300,
   minWidth: 400,
   minHeight: 300,
   webPreferences: { enableRemoteModule: false, nodeIntegration: false, contextIsolation: true }
 });
-win3.setAlwaysOnTop(true);
-win3.loadURL('https://duckduckgo.com/?q=' + url);
+win.setAlwaysOnTop(true);
+win.loadURL('https://duckduckgo.com/?q=' + url);
 }
 
 // updateClock
