@@ -61,7 +61,7 @@ app.whenReady().then(() => {
     exec('conky');
   })
   globalShortcut.register('Alt+Control+D', () => {
-    exec('xfe');
+    exec('xdg-open /home/tea/');
   })
   globalShortcut.register('Alt+Control+T', () => {
     const terminal = new BrowserWindow({
