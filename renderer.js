@@ -32,9 +32,10 @@ function myApps(item) {
   $("#apps").append('<li><a class="dropdown-item" href="' + homedir + '/Apps/' + item + '/index.html" id="' + item + '">' + item + '</a></li>');
   $("#" + item).click(function(){
     //window.open('homedir + '/Apps/' + item + '/index.html', '_blank', 'top=500,left=200,frame=true, enableRemoteModule: true, nodeIntegration: true, contextIsolation: false');
-    createBrowserappWindow(homedir + '/Apps/' + item);
+    //createBrowserappWindow(homedir + '/Apps/' + item);
+    console.log('test');
   });
-  function createBrowserappWindow(url1) {
+  /*function createBrowserappWindow(url1) {
   //const remote = require('@electron/remote');
   const BrowserWindow = remote.BrowserWindow;
   const win2 = new BrowserWindow({
@@ -42,11 +43,11 @@ function myApps(item) {
     height: 300,
     minWidth: 400,
     minHeight: 300,
-    webPreferences: { enableRemoteModule: false, nodeIntegration: false, contextIsolation: true }
+    webPreferences: { enableRemoteModule: true, nodeIntegration: true, contextIsolation: false }
   });
   win2.setAlwaysOnTop(true);
   win2.loadURL(url1);
-  }
+}*/
 }
 }
 });
