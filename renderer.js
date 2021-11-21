@@ -39,7 +39,7 @@ console.log(homedir + '/Apps/Tea/' + item + '/index.html');
   function createBrowserappWindow(url1) {
   //const remote = require('@electron/remote');
   //const BrowserWindow = remote.BrowserWindow;
-  const let = new BrowserWindow({
+let win2 = new BrowserWindow({
     width: 400,
     height: 300,
     minWidth: 400,
@@ -47,7 +47,7 @@ console.log(homedir + '/Apps/Tea/' + item + '/index.html');
     webPreferences: { enableRemoteModule: true, nodeIntegration: true, contextIsolation: false }
   });
   //win2.setAlwaysOnTop(true);
-  win.loadURL(url1);
+  win2.loadURL(url1);
 }
 }
 }
