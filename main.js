@@ -2,8 +2,7 @@
 const {app, screen, globalShortcut} = require('electron')
 //const path = require('path')
 const electron = require('electron');
-const { BrowserWindow } = require('@electron/remote');
-require('@electron/remote/main').initialize();
+const { BrowserWindow } = require('@electron/remote/main');
 require('@electron/remote/main').initialize();
 //require('@electron/remote/main').enable(webContents);
 //const { screen } = require('electron');
