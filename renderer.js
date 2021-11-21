@@ -37,7 +37,7 @@ function myApps(item) {
   function createBrowserappWindow(url) {
   //const remote = require('@electron/remote');
   const BrowserWindow = remote.BrowserWindow;
-  const win = new BrowserWindow({
+  const win2 = new BrowserWindow({
     width: 400,
     height: 300,
     minWidth: 400,
@@ -144,7 +144,7 @@ $("#go").click(function(){
 function createBrowserWindow(url) {
 //const remote = require('@electron/remote');
 const BrowserWindow = remote.BrowserWindow;
-const win = new BrowserWindow({
+const win3 = new BrowserWindow({
   width: 400,
   height: 300,
   minWidth: 400,
