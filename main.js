@@ -1,9 +1,9 @@
 // Modules to control application life and create native browser window
-const {app, screen, globalShortcut} = require('electron')
+const {app, screen, BrowserWindow, globalShortcut} = require('electron')
 //const path = require('path')
-const electron = require('electron');
-const { BrowserWindow } = require('@electron/remote/main');
-require('@electron/remote/main').initialize();
+const remote = require('@electron/remote/main')
+const electron = require('electron')
+remote.initialize() // Intitialize
 //require('@electron/remote/main').enable(webContents);
 //const { screen } = require('electron');
   //const size = screen.getPrimaryDisplay().workAreaSize;
