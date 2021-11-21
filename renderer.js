@@ -150,7 +150,7 @@ let win = new BrowserWindow({
   height: 300,
   minWidth: 400,
   minHeight: 300,
-  webPreferences: { enableRemoteModule: true, nodeIntegration: false, contextIsolation: true }
+  webPreferences: { enableRemoteModule: false, nodeIntegration: false, contextIsolation: true }
 });
 win.setAlwaysOnTop(true);
 win.loadURL('https://duckduckgo.com/?q=' + url);

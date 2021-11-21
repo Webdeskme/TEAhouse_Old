@@ -36,6 +36,7 @@ function createWindow () {
        enableRemoteModule: true, nodeIntegration: true, contextIsolation: false
     }
   })
+   remote.enable(mainWindow.webContents);
   // and load the index.html of the app.
   mainWindow.maximize();
   mainWindow.loadFile('index.html')
