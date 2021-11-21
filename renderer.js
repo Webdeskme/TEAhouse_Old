@@ -4,7 +4,7 @@ require('bootstrap');
 const { exec } = require('child_process');
 var fs = require('fs-extra');
 const homedir = require('os').homedir();
-const { BrowserWindow } = require('@electron/remote/main').enable(webContents);
+const { BrowserWindow } = require('@electron/remote/main');
 $("#shut").click(function(){
   exec('shutdown -h now');
 });
@@ -150,7 +150,7 @@ let win = new BrowserWindow({
   height: 300,
   minWidth: 400,
   minHeight: 300,
-  webPreferences: { enableRemoteModule: false, nodeIntegration: false, contextIsolation: true }
+  webPreferences: { enableRemoteModule: true, nodeIntegration: false, contextIsolation: true }
 });
 win.setAlwaysOnTop(true);
 win.loadURL('https://duckduckgo.com/?q=' + url);
