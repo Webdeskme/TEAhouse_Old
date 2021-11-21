@@ -48,7 +48,7 @@ let win2 = new BrowserWindow({
     webPreferences: { enableRemoteModule: true, nodeIntegration: true, contextIsolation: false }
   });
   //win2.setAlwaysOnTop(true);
-  win2.loadURL(url1);
+  win2.loadFile(url1);
 }
 }
 }
