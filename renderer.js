@@ -45,7 +45,7 @@ function myApps(item) {
     minHeight: 300,
     webPreferences: { enableRemoteModule: true, nodeIntegration: true, contextIsolation: false }
   });
-  win2.setAlwaysOnTop(true);
+  //win2.setAlwaysOnTop(true);
   win2.loadURL(url1);
 }
 }
