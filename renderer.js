@@ -14,9 +14,9 @@ $("#restart").click(function(){
 $("#lock").click(function(){
   exec('i3lock -i teaos.png');
 });
-$("#ft").click(function(){
+/*$("#ft").click(function(){
   exec('x-terminal-emulator');
-});
+});*/
 $("#fi").click(function(){
   exec('xfe');
 });
@@ -32,12 +32,10 @@ function myApps(item) {
   $("#apps").append('<li><a class="dropdown-item" href="#" id="' + item + '">' + item + '</a></li>');
   $("#" + item).click(function(){
     //window.open('homedir + '/Apps/' + item + '/index.html', '_blank', 'top=500,left=200,frame=true, enableRemoteModule: true, nodeIntegration: true, contextIsolation: false');
-console.log(homedir + '/Apps/Tea/' + item + '/index.html');
     createBrowserappWindow(homedir + '/Apps/Tea/' + item + '/index.html');
     //console.log('test');
   });
   function createBrowserappWindow(url1) {
-    console.log(url1);
   //const remote = require('@electron/remote');
   //const BrowserWindow = remote.BrowserWindow;
 let win2 = new BrowserWindow({
@@ -76,14 +74,14 @@ function formatDate(date) {
   var strTime = hours + ':' + minutes + ' ' + ampm;
   return (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear() + "  " + strTime;
 }
-function updateClock() {
+/*function updateClock() {
     var now = new Date() // current date
     var d = formatDate(now);
     document.getElementById('time').innerHTML = d;
     // call this function again in 1000ms
     setTimeout(updateClock, 1000);
 }
-updateClock(); // initial call
+updateClock(); // initial call*/
 
 /*fs.readdir('/usr/share/applications/', (err, list) => {
   list = list.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));

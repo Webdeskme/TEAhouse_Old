@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
     <link href="style.css" rel="stylesheet">
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <title>scriptOS</title>
+    <title>TEAhouse</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -28,11 +28,14 @@
           <a class="nav-link" href="#" id="fi">Files</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" onclick="window.open('Terminal/index.html', '_blank', 'top=500,left=200,frame=true, enableRemoteModule: true, nodeIntegration: true, contextIsolation: false')">Terminal</a>
+          <a class="nav-link" href="#" onclick="window.open('Text/index.html', '_blank', 'top=500,left=200,frame=true, enableRemoteModule: true, nodeIntegration: true, contextIsolation: false')">Text</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" id="ft">Full Terminal</a>
+          <a class="nav-link" href="#" onclick="window.open('Terminal/index.html', '_blank', 'top=500,left=200,frame=true, enableRemoteModule: true, nodeIntegration: true, contextIsolation: false')">Terminal</a>
         </li>
+        <!--<li class="nav-item">
+          <a class="nav-link" href="#" id="ft">Full Terminal</a>
+        </li>-->
         <li class="nav-item">
           <a class="nav-link" href="#" id="s">Settings</a>
         </li>
@@ -45,9 +48,9 @@
             <li><a class="dropdown-item" href="index.html">Reload</a></li>
           </ul>
         </li>
-        <li class="nav-item">
+        <!--<li class="nav-item">
           <span class="nav-link" id="time">Time</span>
-        </li>
+        </li>-->
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="text" placeholder="https://www.website.com" aria-label="Website URL" aria-describedby="go" id="url">
