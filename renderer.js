@@ -32,14 +32,14 @@ function myApps(item) {
   $("#apps").append('<li><a class="dropdown-item" href="#" id="' + item + '">' + item + '</a></li>');
   $("#" + item).click(function(){
     //window.open('homedir + '/Apps/' + item + '/index.html', '_blank', 'top=500,left=200,frame=true, enableRemoteModule: true, nodeIntegration: true, contextIsolation: false');
-console.log(homedir + '/Apps/Tea/' + item);
+console.log(homedir + '/Apps/Tea/' + item + '/index.html');
     createBrowserappWindow(homedir + '/Apps/Tea/' + item + '/index.html');
     //console.log('test');
   });
   function createBrowserappWindow(url1) {
   //const remote = require('@electron/remote');
   //const BrowserWindow = remote.BrowserWindow;
-  const win2 = new BrowserWindow({
+  const win = new BrowserWindow({
     width: 400,
     height: 300,
     minWidth: 400,
@@ -47,7 +47,7 @@ console.log(homedir + '/Apps/Tea/' + item);
     webPreferences: { enableRemoteModule: true, nodeIntegration: true, contextIsolation: false }
   });
   //win2.setAlwaysOnTop(true);
-  win2.loadURL(url1);
+  win.loadURL(url1);
 }
 }
 }
