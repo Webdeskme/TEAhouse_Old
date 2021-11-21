@@ -34,7 +34,7 @@ function myApps(item) {
     //window.open('homedir + '/Apps/' + item + '/index.html', '_blank', 'top=500,left=200,frame=true, enableRemoteModule: true, nodeIntegration: true, contextIsolation: false');
     createBrowserappWindow(homedir + '/Apps/' + item);
   });
-  function createBrowserappWindow(url) {
+  function createBrowserappWindow(url1) {
   //const remote = require('@electron/remote');
   const BrowserWindow = remote.BrowserWindow;
   const win2 = new BrowserWindow({
@@ -44,8 +44,8 @@ function myApps(item) {
     minHeight: 300,
     webPreferences: { enableRemoteModule: false, nodeIntegration: false, contextIsolation: true }
   });
-  win.setAlwaysOnTop(true);
-  win.loadURL(url);
+  win2.setAlwaysOnTop(true);
+  win2.loadURL(url1);
   }
 }
 }
@@ -151,8 +151,8 @@ const win3 = new BrowserWindow({
   minHeight: 300,
   webPreferences: { enableRemoteModule: false, nodeIntegration: false, contextIsolation: true }
 });
-win.setAlwaysOnTop(true);
-win.loadURL('https://duckduckgo.com/?q=' + url);
+win3.setAlwaysOnTop(true);
+win3.loadURL('https://duckduckgo.com/?q=' + url);
 }
 
 // updateClock
