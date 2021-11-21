@@ -35,9 +35,9 @@ function myApps(item) {
     //createBrowserappWindow(homedir + '/Apps/' + item);
     console.log('test');
   });
-  /*function createBrowserappWindow(url1) {
+  function createBrowserappWindow(url1) {
   //const remote = require('@electron/remote');
-  const BrowserWindow = remote.BrowserWindow;
+  //const BrowserWindow = remote.BrowserWindow;
   const win2 = new BrowserWindow({
     width: 400,
     height: 300,
@@ -47,7 +47,7 @@ function myApps(item) {
   });
   win2.setAlwaysOnTop(true);
   win2.loadURL(url1);
-}*/
+}
 }
 }
 });
