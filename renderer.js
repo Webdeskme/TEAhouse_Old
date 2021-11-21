@@ -4,7 +4,7 @@ require('bootstrap');
 const { exec } = require('child_process');
 var fs = require('fs-extra');
 const homedir = require('os').homedir();
-const { BrowserWindow } = require('@electron/remote')
+const { BrowserWindow } = require('@electron/remote/main').enable(webContents);
 $("#shut").click(function(){
   exec('shutdown -h now');
 });
