@@ -1,6 +1,7 @@
 var $ = require( "jquery" );
 window.$ = $;
 require('bootstrap');
+var fs = require('fs-extra');
 const homedir = require('os').homedir();
 var root = '/Documents/';
 $("#save").click(function(){
