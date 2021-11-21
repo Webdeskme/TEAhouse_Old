@@ -37,6 +37,7 @@ console.log(homedir + '/Apps/Tea/' + item + '/index.html');
     //console.log('test');
   });
   function createBrowserappWindow(url1) {
+    console.log(url1);
   //const remote = require('@electron/remote');
   //const BrowserWindow = remote.BrowserWindow;
 let win2 = new BrowserWindow({
