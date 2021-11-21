@@ -4,7 +4,7 @@ require('bootstrap');
 const { exec } = require('child_process');
 var fs = require('fs-extra');
 const homedir = require('os').homedir();
-const remote = require('@electron/remote');
+const { BrowserWindow } = require('@electron/remote')
 $("#shut").click(function(){
   exec('shutdown -h now');
 });
@@ -144,8 +144,8 @@ $("#go").click(function(){
 });
 function createBrowserWindow(url) {
 //const remote = require('@electron/remote');
-const BrowserWindow = remote.BrowserWindow;
-const win = new BrowserWindow({
+//const BrowserWindow = remote.BrowserWindow;
+let win = new BrowserWindow({
   width: 400,
   height: 300,
   minWidth: 400,

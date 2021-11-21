@@ -2,8 +2,8 @@
 const {app, BrowserWindow, screen, globalShortcut} = require('electron')
 //const path = require('path')
 const electron = require('electron');
-//require('@electron/remote/main').initialize();
-require('@electron/remote/main').enable(webContents);
+require('@electron/remote/main').initialize();
+//require('@electron/remote/main').enable(webContents);
 //const { screen } = require('electron');
   //const size = screen.getPrimaryDisplay().workAreaSize;
 //var screenElectron = electron.screen;
