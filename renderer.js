@@ -188,7 +188,7 @@ const hourHand = document.querySelector('.hand-hour');
     setInterval(getTime, 1000);
 
 // context menu
-const {remote} = require('electron')
+/*const {remote} = require('electron')
          const {Menu, MenuItem} = remote
 
          const menu = new Menu()
@@ -214,4 +214,4 @@ const {remote} = require('electron')
          window.addEventListener('contextmenu', (e) => {
             e.preventDefault()
             menu.popup(remote.getCurrentWindow())
-         }, false)
+         }, false)*/
