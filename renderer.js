@@ -5,6 +5,54 @@ const { exec } = require('child_process');
 var fs = require('fs-extra');
 const homedir = require('os').homedir();
 const { BrowserWindow } = require('@electron/remote');
+const express = require("express");
+const app = express();
+const webCastDocDir = homeDir + "/www/";
+app.use(express.static(webCastDocDir));
+const dirTree = require("directory-tree");
+
+let treeData = dirTree(webCastDocDir);
+
+let filesListHtml = helper.getList(treeData, ``, "");
+
+let filesHtml = `
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <title>WebCast</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/file-icons-js/css/style.css" />
+
+        <link rel="stylesheet" href="/index.css" />
+
+  <div class="jumbotron" style="text-align:center;">
+    <img src="/Logo_WhiteBackground.png" width="400" />
+  </div>
+
+  <div id="container">
+    <div id="treeContainer">
+    <ul>
+${filesListHtml}
+</ul>
+      </div>
+
+</div>
+<script src="/jquery/dist/jquery.js"></script>
+
+<script src="/webcast.js"></script>
+</body>
+    </html>`;
+
+app.get("/", (req, res) => {
+  if (!fs.existsSync(`${webCastDocDir}index.html`)) {
+    res.send(filesHtml);
+  }
+});
+
+app.listen(configPort, () => {
+  console.log(`WebCast listening at http://localhost:${configPort}`);
+});
 //var devip = require('dev-ip');
 //import {internalIpV6, internalIpV4} from 'internal-ip';
 //$('#ip').text(devip());
