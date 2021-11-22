@@ -30,7 +30,7 @@ Object.keys(ifaces).forEach(function (ifname) {
       cmyIP += `http://${iface.address}:8080`;
     }
     ++alias;
-    $("#ip").html('<a href="' + cmyIP + '">' + cmyIP + '</a>');
+    $("#ip").html(' <a href="' + cmyIP + '" target="_blank">' + cmyIP + '</a> ');
     /*$("#localAdd").click(function () {
       shell.openExternal(cmyIP);
     });*/
