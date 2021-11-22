@@ -57,11 +57,13 @@ exports.getFileType = file => {
     fileObj.className = dataSplit[0];
 
     fileObj.colors = dataSplit.slice(1).join(" ");
-  } else if (icon === null && file.indexOf(".") === -1) {
+  }
+  /*else if (icon === null && file.indexOf(".") === -1) {
     fileObj.className = "folder-icon";
     fileObj.colors = null;
     fileObj.files = fs.readdirSync(homedir + file + "/");
-  } else {
+  } */
+  else {
     fileObj.className = "fabfile-icon";
     fileObj.colors = "medium-blue";
   }
