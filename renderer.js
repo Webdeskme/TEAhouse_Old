@@ -20,11 +20,11 @@ for (const name of Object.keys(nets)) {
             if (!results[name]) {
                 results[name] = [];
             }
-            $('#ip').text(results["en0"][0]);
             results[name].push(net.address);
         }
     }
 }
+$('#ip').text(results["en0"][0]);
 $("#shut").click(function(){
   exec('shutdown -h now');
 });
