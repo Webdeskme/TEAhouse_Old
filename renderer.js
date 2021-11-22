@@ -51,7 +51,7 @@ for (const name of Object.keys(nets)) {
     }
 }*/
 //$('#ip').text(results["en0"][0]);
-console.log(results);
+//console.log(results);
 $("#shut").click(function(){
   exec('shutdown -h now');
 });
