@@ -24,10 +24,10 @@ Object.keys(ifaces).forEach(function (ifname) {
     var amyIP = "";
     if (alias >= 1) {
       // this single interface has multiple ipv4 addresses
-      cmyIP += `http://${iface.address}:${configPort}`;
+      cmyIP += `http://${iface.address}:8080`;
     } else {
       // this interface has only one ipv4 adress
-      cmyIP += `http://${iface.address}:${configPort}`;
+      cmyIP += `http://${iface.address}:8080`;
     }
     ++alias;
     $("#ip").text(cmyIP);
