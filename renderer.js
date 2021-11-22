@@ -51,8 +51,8 @@ app.get("/", (req, res) => {
   }
 });
 
-app.listen(configPort, () => {
-  console.log(`WebCast listening at http://localhost:${configPort}`);
+app.listen(8080, () => {
+  console.log(`WebCast listening at http://localhost:8080`);
 });
 //var devip = require('dev-ip');
 //import {internalIpV6, internalIpV4} from 'internal-ip';
