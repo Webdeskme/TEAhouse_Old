@@ -24,11 +24,11 @@ function createWindow () {
   // Create the browser window.
   const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize;
   //const screenSize = screen.getPrimaryDisplay().workAreaSize;
-  height = height - 30;
+  var he = height - 30;
   const mainWindow = new BrowserWindow({
     type: "desktop",
     width: width,
-  height: height,
+  height: he,
   fullscreen: true,
   frame: false,
   autoHideMenuBar: true,
