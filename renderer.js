@@ -5,9 +5,9 @@ const { exec } = require('child_process');
 var fs = require('fs-extra');
 const homedir = require('os').homedir();
 const { BrowserWindow } = require('@electron/remote');
-var { internalIpV4 } = require('internal-ip');
+var devip = require('dev-ip');
 //import {internalIpV6, internalIpV4} from 'internal-ip';
-$('#ip').text(internalIpV4());
+$('#ip').text(devip());
 $("#shut").click(function(){
   exec('shutdown -h now');
 });
