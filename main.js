@@ -88,7 +88,7 @@ app.whenReady().then(() => {
   globalShortcut.register('Alt+Control+D', () => {
     exec('nimblenote');
   })
-  globalShortcut.register('Alt+Control+B', () => {
+  globalShortcut.register('Alt+Control+S', () => {
     exec('pkill nimblenote');
   })
   globalShortcut.register('Alt+Control+Delete', () => {
