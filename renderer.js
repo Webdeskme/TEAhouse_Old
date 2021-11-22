@@ -8,9 +8,34 @@ const { BrowserWindow } = require('@electron/remote');
 //var devip = require('dev-ip');
 //import {internalIpV6, internalIpV4} from 'internal-ip';
 //$('#ip').text(devip());
-const { networkInterfaces } = require('os');
+//const { networkInterfaces } = require('os');
+const ifaces = os.networkInterfaces();
+Object.keys(ifaces).forEach(function (ifname) {
+  var alias = 0;
 
-const nets = networkInterfaces();
+  ifaces[ifname].forEach(function (iface) {
+    if ("IPv4" !== iface.family || iface.internal !== false) {
+      // skip over internal (i.e. 127.0.0.1) and non-ipv4 addresses
+      return;
+    }
+    var myIP = "";
+    var cmyIP = "";
+    var amyIP = "";
+    if (alias >= 1) {
+      // this single interface has multiple ipv4 addresses
+      cmyIP += `http://${iface.address}:${configPort}`;
+    } else {
+      // this interface has only one ipv4 adress
+      cmyIP += `http://${iface.address}:${configPort}`;
+    }
+    ++alias;
+    $("#ip").text(cmyIP);
+    /*$("#localAdd").click(function () {
+      shell.openExternal(cmyIP);
+    });*/
+  });
+});
+/*const nets = networkInterfaces();
 const results = Object.create(null); // Or just '{}', an empty object
 
 for (const name of Object.keys(nets)) {
@@ -23,7 +48,7 @@ for (const name of Object.keys(nets)) {
             results[name].push(net.address);
         }
     }
-}
+}*/
 //$('#ip').text(results["en0"][0]);
 console.log(results);
 $("#shut").click(function(){
