@@ -33,11 +33,11 @@ contextMenu({
 			visible: parameters.mediaType === 'image'
 		},
 		{
-			label: 'Search Google for “{selection}”',
+			label: 'Search DuckDuck for “{selection}”',
 			// Only show it when right-clicking text
 			visible: parameters.selectionText.trim().length > 0,
 			click: () => {
-				shell.openExternal(`https://google.com/search?q=${encodeURIComponent(parameters.selectionText)}`);
+				shell.openExternal(`https://duckduckgo.com/?q=${encodeURIComponent(parameters.selectionText)}`);
 			}
 		}
 	]
