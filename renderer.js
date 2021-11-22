@@ -45,11 +45,15 @@ ${filesListHtml}
 </body>
     </html>`;
 
-app.get("/", (req, res) => {
+/// make doc
+
+
+
+/*app.get("/", (req, res) => {
   if (!fs.existsSync(`${webCastDocDir}index.html`)) {
     res.send(filesHtml);
   }
-});
+});*/
 
 app.listen(8080, () => {
   console.log(`WebCast listening at http://localhost:8080`);
