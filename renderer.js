@@ -54,7 +54,7 @@ ${filesListHtml}
     res.send(filesHtml);
   }
 });*/
-var www = fs.readFileSync( homedir + "/Data/" );
+var www = fs.readFileSync( homedir + "/Data/www.txt" );
 if(www == "yes"){
 app.listen(8080, () => {
   console.log(`WebCast listening at http://localhost:8080`);
