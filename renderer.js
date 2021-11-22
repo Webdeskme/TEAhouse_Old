@@ -54,10 +54,12 @@ ${filesListHtml}
     res.send(filesHtml);
   }
 });*/
-
+var www = fs.readFileSync( homedir + "/Data/" );
+if(www == "yes"){
 app.listen(8080, () => {
   console.log(`WebCast listening at http://localhost:8080`);
 });
+}
 //var devip = require('dev-ip');
 //import {internalIpV6, internalIpV4} from 'internal-ip';
 //$('#ip').text(devip());
