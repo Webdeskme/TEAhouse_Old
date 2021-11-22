@@ -85,10 +85,16 @@ app.whenReady().then(() => {
   globalShortcut.register('Alt+Control+B', () => {
     exec('min');
   })
+  globalShortcut.register('Alt+Control+D', () => {
+    exec('nimblenote');
+  })
+  globalShortcut.register('Alt+Control+B', () => {
+    exec('pkill nimblenote');
+  })
   globalShortcut.register('Alt+Control+Delete', () => {
     exec('gnome-system-monitor');
   })
-  globalShortcut.register('Alt+Control+D', () => {
+  globalShortcut.register('Alt+Control+F', () => {
     exec('xdg-open /home/tea/');
   })
   globalShortcut.register('Alt+Control+L', () => {
