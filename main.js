@@ -91,6 +91,9 @@ app.whenReady().then(() => {
   globalShortcut.register('Alt+Control+D', () => {
     exec('xdg-open /home/tea/');
   })
+  globalShortcut.register('Alt+Control+L', () => {
+    exec('i3lock -i teaos.png --tiling');
+  })
   globalShortcut.register('Alt+Control+T', () => {
     const terminal = new BrowserWindow({
       width: 800,

@@ -12,7 +12,7 @@ $("#restart").click(function(){
   exec('shutdown -r now');
 });
 $("#lock").click(function(){
-  exec('i3lock -i teaos.png');
+  exec('i3lock -i teaos.png --tiling');
 });
 /*$("#ft").click(function(){
   exec('x-terminal-emulator');
