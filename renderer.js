@@ -7,7 +7,7 @@ const homedir = require('os').homedir();
 const { BrowserWindow } = require('@electron/remote');
 const express = require("express");
 const app = express();
-const webCastDocDir = homeDir + "/www/";
+const webCastDocDir = homedir + "/www/";
 app.use(express.static(webCastDocDir));
 const dirTree = require("directory-tree");
 
