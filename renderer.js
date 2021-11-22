@@ -9,6 +9,7 @@ const { BrowserWindow } = require('@electron/remote');
 //import {internalIpV6, internalIpV4} from 'internal-ip';
 //$('#ip').text(devip());
 //const { networkInterfaces } = require('os');
+const os = require("os");
 const ifaces = os.networkInterfaces();
 Object.keys(ifaces).forEach(function (ifname) {
   var alias = 0;
