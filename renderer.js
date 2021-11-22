@@ -5,9 +5,26 @@ const { exec } = require('child_process');
 var fs = require('fs-extra');
 const homedir = require('os').homedir();
 const { BrowserWindow } = require('@electron/remote');
-var devip = require('dev-ip');
+//var devip = require('dev-ip');
 //import {internalIpV6, internalIpV4} from 'internal-ip';
-$('#ip').text(devip());
+//$('#ip').text(devip());
+const { networkInterfaces } = require('os');
+
+const nets = networkInterfaces();
+const results = Object.create(null); // Or just '{}', an empty object
+
+for (const name of Object.keys(nets)) {
+    for (const net of nets[name]) {
+        // Skip over non-IPv4 and internal (i.e. 127.0.0.1) addresses
+        if (net.family === 'IPv4' && !net.internal) {
+            if (!results[name]) {
+                results[name] = [];
+            }
+            $('#ip').text(results["en0"][0]);
+            results[name].push(net.address);
+        }
+    }
+}
 $("#shut").click(function(){
   exec('shutdown -h now');
 });
