@@ -12,7 +12,7 @@ const webCastDocDir = homedir + "/www/";
 const helper = require(homedir + "/TEAhouse/helpers/helpers");
 app.use(express.static(webCastDocDir));
 const dirTree = require("directory-tree");
-
+var wwww = "off";
 let treeData = dirTree(webCastDocDir);
 
 let filesListHtml = helper.getList(treeData, ``, "");
@@ -55,16 +55,16 @@ ${filesListHtml}
     res.send(filesHtml);
   }
 });*/
-fs.writeFileSync(homedir + "/Data/TEAhouse/www.txt", "on");
-var wwww = fs.readFileSync( homedir + "/Data/TEAhouse/www.txt", 'utf8' );
-console.log(wwww);
+//fs.writeFileSync(homedir + "/Data/TEAhouse/www.txt", "on");
+//var wwww = fs.readFileSync( homedir + "/Data/TEAhouse/www.txt", 'utf8' );
+/*console.log(wwww);
 console.log(wwww == "on");
 if(wwww == "on"){
   console.log('in');
 app.listen(8080, () => {
   console.log(`WebCast listening at http://localhost:8080`);
 });
-}
+}*/
 //var devip = require('dev-ip');
 //import {internalIpV6, internalIpV4} from 'internal-ip';
 //$('#ip').text(devip());
@@ -114,6 +114,20 @@ for (const name of Object.keys(nets)) {
 //console.log(results);
 $("#shut").click(function(){
   exec('shutdown -h now');
+});
+$("#tog").click(function(){
+  if(wwww == "on"){
+    wwww = "off"
+    $("#tog").html("ON");
+    app.listen(8080, () => {
+      console.log(`WebCast listening at http://localhost:8080`);
+    });
+  }
+  else{
+    wwww = "on";
+    $("#tog").html("OFF");
+    location.reload();
+  }
 });
 $("#restart").click(function(){
   exec('shutdown -r now');
