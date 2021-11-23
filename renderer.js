@@ -54,6 +54,7 @@ ${filesListHtml}
     res.send(filesHtml);
   }
 });*/
+fs.writeFileSync(homedir + "/Data/TEAhouse/www.txt", "on");
 var wwww = fs.readFileSync( homedir + "/Data/TEAhouse/www.txt", 'utf8' );
 console.log(wwww);
 console.log(wwww == "on");
