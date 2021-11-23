@@ -55,8 +55,8 @@ ${filesListHtml}
   }
 });*/
 var wwww = fs.readFileSync( homedir + "/Data/TEAhouse/www.txt", 'utf8' );
-console.log(wwww);
 if(wwww == "on"){
+  console.log(wwww);
 app.listen(8080, () => {
   console.log(`WebCast listening at http://localhost:8080`);
 });
