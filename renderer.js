@@ -118,15 +118,15 @@ $("#shut").click(function(){
 $("#tog").click(function(){
   if(wwww == "on"){
     wwww = "off"
+    $("#tog").html("OFF");
+    location.reload();
+  }
+  else{
+    wwww = "on";
     $("#tog").html("ON");
     app.listen(8080, () => {
       console.log(`WebCast listening at http://localhost:8080`);
     });
-  }
-  else{
-    wwww = "on";
-    $("#tog").html("OFF");
-    location.reload();
   }
 });
 $("#restart").click(function(){
