@@ -301,7 +301,7 @@ const hourHand = document.querySelector('.hand-hour');
         const hours = now.getHours();
         const hoursDegree = (((hours / 24) * 360) + 90);
         hourHand.style.transform = `rotate(${hoursDegree}deg)`
-        console.log(hours);
+        //console.log(hours);
 
 
 
