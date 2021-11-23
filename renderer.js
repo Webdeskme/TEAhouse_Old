@@ -1,6 +1,7 @@
 var $ = require( "jquery" );
 window.$ = $;
 require('bootstrap');
+require('bootstrap-icons');
 const { exec } = require('child_process');
 var fs = require('fs-extra');
 const homedir = require('os').homedir();
