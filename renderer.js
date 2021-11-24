@@ -16,7 +16,6 @@ const si = require('systeminformation');
 si.battery(function(data) {
   $("#bat").html('<i class="bi bi-battery-half"></i>' + data.percent + '%');
 })
-console.log(pbat);
 var wwww = "off";
 let treeData = dirTree(webCastDocDir);
 
