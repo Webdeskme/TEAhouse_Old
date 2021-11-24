@@ -79,28 +79,25 @@ function createWindow () {
 app.whenReady().then(() => {
   //const { screen } = require('electron');
   const { exec } = require('child_process');
-  globalShortcut.register('Alt+Control+X', () => {
+  globalShortcut.register('Super+T', () => {
     exec('x-terminal-emulator');
   })
-  globalShortcut.register('Super+A', () => {
-    exec('x-terminal-emulator');
-  })
-  globalShortcut.register('Alt+Control+B', () => {
+  globalShortcut.register('Super+B', () => {
     exec('min');
   })
-  globalShortcut.register('Alt+Control+D', () => {
+  globalShortcut.register('Superl+D', () => {
     exec('nimblenote');
   })
-  globalShortcut.register('Alt+Control+S', () => {
+  globalShortcut.register('Super+S', () => {
     exec('pkill nimblenote');
   })
   globalShortcut.register('Alt+Control+Delete', () => {
     exec('gnome-system-monitor');
   })
-  globalShortcut.register('Alt+Control+F', () => {
+  globalShortcut.register('Super+F', () => {
     exec('xdg-open /home/tea/');
   })
-  globalShortcut.register('Alt+Control+L', () => {
+  globalShortcut.register('Super+L', () => {
     exec('i3lock -i teaos.png --tiling');
   })
   globalShortcut.register('Alt+Control+T', () => {
