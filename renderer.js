@@ -12,8 +12,10 @@ const webCastDocDir = homedir + "/www/";
 const helper = require(homedir + "/TEAhouse/helpers/helpers");
 app.use(express.static(webCastDocDir));
 const dirTree = require("directory-tree");
-const {percent} = require('systeminformation').battery();
-console.log(percent);
+const si = require('systeminformation');
+si.cpu(function(data) {
+  console.log(data.percent);
+})
 var wwww = "off";
 let treeData = dirTree(webCastDocDir);
 
