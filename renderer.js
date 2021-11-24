@@ -13,7 +13,7 @@ const helper = require(homedir + "/TEAhouse/helpers/helpers");
 app.use(express.static(webCastDocDir));
 const dirTree = require("directory-tree");
 const si = require('systeminformation');
-var pbat = si.battery(function(data) {
+var pbat = si.battery(function(data.percent) {
   return data.percent;
 })
 console.log(pbat);
