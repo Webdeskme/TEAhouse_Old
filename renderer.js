@@ -16,6 +16,8 @@ const si = require('systeminformation');
 setInterval(function() {
 si.battery(function(data) {
   $("#bat").html('<span class="nav-link"><i class="bi bi-battery-half"></i>' + data.percent + '%</span>');
+  console.log(data.hasBattery);
+  console.log(data.isCharging);
 })
 }, 1000);
 var wwww = "off";
