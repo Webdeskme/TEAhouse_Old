@@ -119,12 +119,12 @@ $("#shut").click(function(){
 $("#tog").click(function(){
   if(wwww == "on"){
     wwww = "off"
-    $("#tog").html("OFF");
+    $("#tog").html('<i class="bi bi-toggle-off"></i>');
     location.reload();
   }
   else{
     wwww = "on";
-    $("#tog").html("ON");
+    $("#tog").html('<i class="bi bi-toggle-on"></i>');
     app.listen(8080, () => {
       console.log(`WebCast listening at http://localhost:8080`);
     });
