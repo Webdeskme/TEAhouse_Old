@@ -85,10 +85,10 @@ app.whenReady().then(() => {
   globalShortcut.register('Super+B', () => {
     exec('min');
   })
-  globalShortcut.register('Superl+2', () => {
+  globalShortcut.register('Superl+O', () => {
     exec('nimblenote');
   })
-  globalShortcut.register('Super+1', () => {
+  globalShortcut.register('Super+I', () => {
     exec('pkill nimblenote');
   })
   globalShortcut.register('Alt+Control+Delete', () => {
