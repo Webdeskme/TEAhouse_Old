@@ -82,6 +82,9 @@ app.whenReady().then(() => {
   globalShortcut.register('Alt+Control+X', () => {
     exec('x-terminal-emulator');
   })
+  globalShortcut.register('Super', () => {
+    exec('x-terminal-emulator');
+  })
   globalShortcut.register('Alt+Control+B', () => {
     exec('min');
   })
