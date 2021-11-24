@@ -13,9 +13,11 @@ const helper = require(homedir + "/TEAhouse/helpers/helpers");
 app.use(express.static(webCastDocDir));
 const dirTree = require("directory-tree");
 const si = require('systeminformation');
+setInterval(function() {
 si.battery(function(data) {
   $("#bat").html('<span class="nav-link"><i class="bi bi-battery-half"></i>' + data.percent + '%</span>');
 })
+}, 1000);
 var wwww = "off";
 let treeData = dirTree(webCastDocDir);
 
