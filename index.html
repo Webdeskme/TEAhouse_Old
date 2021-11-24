@@ -44,15 +44,6 @@
         <li class="nav-item">
           <a class="nav-link" href="#" id="s" title="Settings"><i class="bi bi-gear-wide-connected"></i></a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" title="ShutDown" role="button" data-bs-toggle="dropdown"><i class="bi bi-power"></i></a>
-          <ul class="dropdown-menu">
-            <li><button id="shut" class="dropdown-item">Shutdown</button></li>
-            <li><button id="restart" class="dropdown-item">Restart</button></li>
-            <li><button id="lock" class="dropdown-item">Lock</button></li>
-            <li><a class="dropdown-item" href="index.html">Reload</a></li>
-          </ul>
-        </li>
         <!--<li class="nav-item">
           <span class="nav-link" id="time">Time</span>
         </li>-->
@@ -68,6 +59,17 @@
         <input class="form-control me-2" type="text" placeholder="https://www.website.com" aria-label="Website URL" aria-describedby="go" id="url">
         <button class="btn btn-outline-secondary" type="button" id="go"><i class="bi bi-search"></i></button>
       </form>
+      <ul class="navbar-nav ml-auto">
+		<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" title="ShutDown" role="button" data-bs-toggle="dropdown"><i class="bi bi-power"></i></a>
+          <ul class="dropdown-menu">
+            <li><button id="shut" class="dropdown-item">Shutdown</button></li>
+            <li><button id="restart" class="dropdown-item">Restart</button></li>
+            <li><button id="lock" class="dropdown-item">Lock</button></li>
+            <li><a class="dropdown-item" href="index.html">Reload</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
