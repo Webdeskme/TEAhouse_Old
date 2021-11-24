@@ -5,6 +5,9 @@ body {
     /*background-position: center center; */
  background-color: #000000;
 }
+.logo {
+	width: 40px;
+	}
 .clock {
         width: 30rem;
         height: 30rem;
