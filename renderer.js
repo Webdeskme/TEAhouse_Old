@@ -24,8 +24,9 @@ let filesHtml = `
         <title>WebCast</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="/file-icons-js/css/style.css" />
-
+        <!--<link rel="stylesheet" href="/file-icons-js/css/style.css" />
+        bootstrap-icons.scss-->
+		<link rel="stylesheet" href="bootstrap-icons.scssbootstrap-icons.scss" />
         <link rel="stylesheet" href="/index.css" />
 
   <div class="jumbotron" style="text-align:center;">
