@@ -14,7 +14,7 @@ app.use(express.static(webCastDocDir));
 const dirTree = require("directory-tree");
 const si = require('systeminformation');
 si.battery(function(data) {
-  $("#bat").html('<i class="bi bi-battery-half"></i>' + data.percent + '%');
+  $("#bat").html('<span class="nav-link"><i class="bi bi-battery-half"></i>' + data.percent + '%</span>');
 })
 var wwww = "off";
 let treeData = dirTree(webCastDocDir);
