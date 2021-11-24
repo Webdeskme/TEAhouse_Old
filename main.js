@@ -85,10 +85,10 @@ app.whenReady().then(() => {
   globalShortcut.register('Super+B', () => {
     exec('min');
   })
-  globalShortcut.register('Superl+D', () => {
+  globalShortcut.register('Superl+2', () => {
     exec('nimblenote');
   })
-  globalShortcut.register('Super+S', () => {
+  globalShortcut.register('Super+1', () => {
     exec('pkill nimblenote');
   })
   globalShortcut.register('Alt+Control+Delete', () => {
@@ -97,7 +97,7 @@ app.whenReady().then(() => {
   globalShortcut.register('Super+F', () => {
     exec('xdg-open /home/tea/');
   })
-  globalShortcut.register('Super+L', () => {
+  globalShortcut.register('Super +L', () => {
     exec('i3lock -i teaos.png --tiling');
   })
   globalShortcut.register('Alt+Control+T', () => {
