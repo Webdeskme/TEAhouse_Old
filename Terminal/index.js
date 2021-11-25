@@ -4,6 +4,7 @@ const remote = require('electron').remote;
 var d = '/';
 var home = homedir;
 $('body').terminal({
+	prompt: 'TEAhouse> ',
     help: function() {
         this.echo('ls: list\ncd "dir": change dir\ncat "file": read file\nopen "file": opens file\nrun "app": reun an app\ngit clone: add app or theme\ngit pull: update app or theme');
     },
@@ -40,6 +41,15 @@ $('body').terminal({
        window.close();
     }
   },
+    {
+        greetings: greetings.innerHTML + '\n\nType help if you need it.\n\n'
+});
+$('body').terminal({
+	prompt: '?>',
+	test: function() {
+      this.echo('test');
+    }
+	},
     {
         greetings: greetings.innerHTML + '\n\nType help if you need it.\n\n'
 });
