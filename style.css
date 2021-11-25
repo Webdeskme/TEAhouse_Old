@@ -42,3 +42,8 @@ body {
             transition: 0.3s all;
             transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
         }
+        .apps {
+        height: 400px;
+        min-height: 400px;
+        max-height: 400px;
+        }
