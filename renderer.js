@@ -152,8 +152,11 @@ $("#lock").click(function(){
 /*$("#ft").click(function(){
   exec('x-terminal-emulator');
 });*/
+$("#ter").click(function(){
+  exec('x-terminal-emulator');
+});
 $("#fi").click(function(){
-  exec('xfe');
+  exec('xdg-open /home/tea/');
 });
 $("#s").click(function(){
   exec('gnome-control-center');
