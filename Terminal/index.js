@@ -6,7 +6,7 @@ var home = homedir;
 $('body').terminal({
     help: function() {
         this.echo('ls: list\ncd "dir": change dir\ncat "file": read file\nopen "file": opens file\nrun "app": reun an app\ngit clone: add app or theme\ngit pull: update app or theme');
-    },
+    }
     ls: function() {
       //console.log(home + d);
       fs.readdir(home + d, (err, list) => {
@@ -19,7 +19,7 @@ $('body').terminal({
       }
       this.echo(e);
       });
-    },
+    }
     cd: function(di) {
       if(di == '../'){
 
@@ -27,14 +27,14 @@ $('body').terminal({
       else{
         d += di + '/';
       }
-    },
+    }
     pwd: function() {
       this.echo(d);
-    },
+    }
     cat: function(file) {
       var ca = fs.readFileSync(home + d + file);
       this.echo(ca);
-    },
+    }
     exit: function() {
       var window = remote.getCurrentWindow();
        window.close();
@@ -42,12 +42,4 @@ $('body').terminal({
   },
     {
         greetings: greetings.innerHTML + '\n\nType help if you need it.\n\n', prompt: 'TEAhouse> ',
-});
-$('body').terminal({
-	test: function() {
-      this.echo('test');
-    }
-	},
-    {
-        greetings: greetings.innerHTML + '\n\nType help if you need it.\n\n', prompt: '?> ',
 });
