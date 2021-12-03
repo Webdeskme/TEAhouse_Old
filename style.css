@@ -12,10 +12,10 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;*/
   /*background-size: cover;*/
-  /*position: relative;
+  position: relative;
  background-image: url("tea.jpg");
   background-size: 150vh;
-  background-color: #000000;*/
+  background-color: #000000;
 }
 .logo {
 	width: 40px;

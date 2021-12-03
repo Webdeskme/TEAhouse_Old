@@ -58,7 +58,6 @@ function createWindow () {
     width: width,
   height: he,
   fullscreen: true,
-	transparent: true,
   frame: false,
   autoHideMenuBar: true,
     "title": "main window",
@@ -97,7 +96,7 @@ app.whenReady().then(() => {
     exec('gnome-system-monitor');
   })
   globalShortcut.register('Super+F', () => {
-    exec('xdg-open /home/tea/');
+    exec('thunar');
   })
   globalShortcut.register('Super +L', () => {
     exec('i3lock -i teaos.png --tiling');
