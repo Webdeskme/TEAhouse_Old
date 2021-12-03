@@ -58,6 +58,7 @@ function createWindow () {
     width: width,
   height: he,
   fullscreen: true,
+	transparent: true,
   frame: false,
   autoHideMenuBar: true,
     "title": "main window",
