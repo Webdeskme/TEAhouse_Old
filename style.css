@@ -10,13 +10,13 @@ height: 100%;
  /* Full height */
 
   /* Center and scale the image nicely */
-  background-position: center;
+  /*background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover;*/
   /*background-size: cover;*/
-  background-size:150% 150vh;
+  background-size: 150vh;
   background-color: #000000;
 }
 .logo {
