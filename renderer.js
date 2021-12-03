@@ -162,7 +162,7 @@ $("#ter").click(function(){
   exec('x-terminal-emulator');
 });
 $("#fi").click(function(){
-  exec('xdg-open /home/tea/');
+  exec('thunar');
 });
 $("#s").click(function(){
   exec('gnome-control-center');
