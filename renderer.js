@@ -149,6 +149,9 @@ $("#restart").click(function(){
 $("#lock").click(function(){
   exec('i3lock -i teaos.png --tiling');
 });
+$("#logout").click(function(){
+  exec('openbox --exit');
+});
 $("#desk").click(function(){
   exec('wmctrl -b toggle -k on');
 });
