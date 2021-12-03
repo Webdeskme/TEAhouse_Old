@@ -1,9 +1,17 @@
 body {
  background-image: url("tea.jpg");
- background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
+ /*background-size:     cover;                      /* <------ */
+    /*background-repeat:   no-repeat;*/
     /*background-position: center center; */
- background-color: #000000;
+ /*background-color: #000000;*/
+ /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000000;
 }
 .logo {
 	width: 40px;
