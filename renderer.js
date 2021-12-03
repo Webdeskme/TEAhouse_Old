@@ -26,7 +26,7 @@ si.battery(function(data) {
 })
 }, 1000);
 var wwww = "off";
-let treeData = dirTree(webCastDocDir);
+/*let treeData = dirTree(webCastDocDir);
 
 let filesListHtml = helper.getList(treeData, ``, "");
 
