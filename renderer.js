@@ -162,7 +162,8 @@ $("#browser").click(function(){
   exec('x-terminal-emulator');
 });*/
 $("#ter").click(function(){
-  exec('x-terminal-emulator');
+  //exec('x-terminal-emulator');
+	exec('hyper');
 });
 $("#fi").click(function(){
   exec('thunar');
