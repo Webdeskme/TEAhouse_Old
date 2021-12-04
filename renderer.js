@@ -127,7 +127,7 @@ for (const name of Object.keys(nets)) {
 //$('#ip').text(results["en0"][0]);
 //console.log(results);
 $("#shut").click(function(){
-  exec('shutdown -h now');
+  exec('sudo shutdown -h now');
 });
 $("#tog").click(function(){
   if(wwww == "on"){
@@ -144,7 +144,7 @@ $("#tog").click(function(){
   }
 });
 $("#restart").click(function(){
-  exec('shutdown -r now');
+  exec('sudo reboot');
 });
 $("#lock").click(function(){
   exec('i3lock -i teaos.png --tiling');
